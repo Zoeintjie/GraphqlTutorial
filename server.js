@@ -1,9 +1,13 @@
 import express from 'express';
 import {graphqlExpress, graphiqlExpress} from 'apollo-server-express';
+import bodyParser from 'body-parser';
+import schema from './schema.js';
 
 const server = express();
 
-console.log("some text");
+server.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
+server.use('/graphql', bodyParser.json(), graphqlExpress({schema}));
+
 
 server.listen(4000, () => {
     console.log("listening on port 4000");
