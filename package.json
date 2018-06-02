@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Zoeintjie/PracticeGraphQL/issues"
   },
-  "homepage": "https://github.com/Zoeintjie/PracticeGraphQL#readme"
+  "homepage": "https://github.com/Zoeintjie/PracticeGraphQL#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
